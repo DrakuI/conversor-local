@@ -1,0 +1,16 @@
+nativo/chave-privada.pem
+nativo/*.pem
+nativo/*.pem.bak-*
+nativo/com.conversor.local.json
+vendor/
+node_modules/
+package-lock.json
+package.json
+tmp/
+path-backup-*.txt
+*.bak
+*.crx
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

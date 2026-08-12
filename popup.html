@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Conversor Local</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Conversor Local</h1>
+    <p class="sub">Tudo roda na sua máquina.</p>
+  </header>
+
+  <nav class="abas">
+    <button class="aba ativa" data-alvo="painel-baixar">Baixar</button>
+    <button class="aba" data-alvo="painel-converter">Converter</button>
+  </nav>
+
+  <section id="painel-baixar" class="painel ativo">
+    <p class="rotulo">O que extrair da aba aberta?</p>
+    <div class="botoes">
+      <button class="acao tipo" data-tipo="video">Vídeo</button>
+      <button class="acao tipo" data-tipo="imagem">Imagem</button>
+      <button class="acao tipo" data-tipo="som">Som</button>
+      <button class="acao tipo" data-tipo="texto">Texto</button>
+    </div>
+
+    <div id="areaTexto" class="oculto">
+      <p class="rotulo" id="tituloTexto"></p>
+      <pre id="previaTexto" class="previa"></pre>
+      <div class="botoes">
+        <button id="btnTxt" class="acao secundaria">.txt</button>
+        <button id="btnDocx" class="acao secundaria">.docx</button>
+        <button id="btnHtml" class="acao secundaria">.html</button>
+      </div>
+    </div>
+    <ul id="resultados" class="resultados"></ul>
+	<div id="areaYtDlp" class="oculto">
+      <p class="rotulo" id="rotuloYtDlp"></p>
+      <div class="botoes">
+        <button id="btnExecutar" class="acao">Executar agora</button>
+        <button id="btnCopiar" class="acao secundaria">Copiar comando</button>
+      </div>
+      <code id="comandoYtDlp" class="comando"></code>
+      <p class="dica" id="dicaNativo"></p>
+    </div>
+
+    <details class="avancado">
+      <summary>Link direto de arquivo</summary>
+      <input type="url" id="campoUrl" placeholder="https://site.com/arquivo.mp4">
+      <div id="acoesUrl" class="botoes"></div>
+      <p class="dica" id="dicaUrl">Cole a URL do arquivo em si, não da página.</p>
+    </details>
+  </section>
+
+  <section id="painel-converter" class="painel">
+    <label class="campo">
+      <span>Arquivos do seu computador</span>
+      <input type="file" id="arquivos" multiple>
+    </label>
+
+    <p class="rotulo" id="dicaConverter">Escolha um arquivo para ver os destinos possíveis.</p>
+    <div id="destinos" class="destinos"></div>
+
+    <div id="opcoesGif" class="opcoes oculto">
+      <label>Largura <input type="number" id="gifLargura" value="480" min="80" max="1280" step="20"></label>
+      <label>FPS <input type="number" id="gifFps" value="12" min="4" max="30"></label>
+      <label>Início (s) <input type="number" id="gifInicio" value="0" min="0" step="0.5"></label>
+      <label>Duração (s) <input type="number" id="gifDuracao" value="5" min="0" step="0.5"></label>
+    </div>
+
+    <div class="botoes">
+      <button id="btnConverter" class="acao" disabled>Converter</button>
+    </div>
+  </section>
+
+  <footer>
+    <progress id="barra" max="100" value="0"></progress>
+    <p id="status">Pronto.</p>
+    <a id="download" class="download oculto" download></a>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

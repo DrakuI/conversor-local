@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Baixando…</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="modo-aba">
+  <header>
+    <h1>Download</h1>
+    <p class="sub" id="alvo"></p>
+  </header>
+
+  <progress id="barra" max="100" value="0"></progress>
+  <p id="status">Iniciando…</p>
+
+  <div class="botoes">
+    <button id="btnCancelar" class="acao secundaria">Cancelar</button>
+  </div>
+
+  <a id="download" class="download oculto" download></a>
+
+  <pre id="log" class="log"></pre>
+  <p class="dica">Pode deixar em segundo plano. Não feche antes de terminar.</p>
+
+  <script type="module" src="trabalho.js"></script>
+</body>
+</html>

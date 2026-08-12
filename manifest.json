@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA68ZXueb8uQSplUiuzlxrZCn21/knCtdAhKxp0Esw2BpLkrzVTvy+ULulnu5KOa7/5M+qmPeVuNX0Kcnz1KLEU8lkzdFqGKK0DlFrza7EP5Vs5J9HR/aSFnHOFv46iD2FmHSeFOwg0hcjcWXq+rV5dm0rkVxwvzwZevuxTQ+j7cduUNpqAT0JyNFPqFeIgtJfnkDHs59uUd/rf3fFKq7DIDGR8Y93l2weBdtXYURcSrx9q/0YWqok4wgTth/ZUd12BZ0PsTczqun9kvAlgGx6acoQt3WTTL1AisyQyTLyyfum8hpxuVQPq/MvXkimZwKYt89RCOr0HVN/dG5ce4krIQIDAQAB",
+  "name": "Conversor Local",
+  "version": "2.0.0",
+  "description": "Extrai mídia de páginas e converte arquivos, 100% na sua máquina.",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Conversor Local"
+  },
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "nativeMessaging"
+  ],
+
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
